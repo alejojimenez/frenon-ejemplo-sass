@@ -1,0 +1,41 @@
+@import "partials/variables";
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: $backgroundColor;
+}
+.container {
+    width: 860px;
+    margin: 0 auto;
+}
+a {
+    color: $primaryColor;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// CSS FOR HEADER
+@import "partials/header";
+@import "partials/profile";
+@import "partials/normalize";
+
+.profile-cover:hover .cover-author {
+    visibility: visible;
+    opacity: 1;
+}
+.cover-author {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 0.6rem;
+    background-color: #fff;
+    transition: 0.3s;
+}
